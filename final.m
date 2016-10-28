@@ -20,14 +20,6 @@ fs=1/ts;
 f=(0:N-1)*fs/N; jw=j*2*pi*f;
 M_F=fft(m_f);M_P=fft(m_p);IMP_measured=M_P./M_F;
 
-% f_LP_ind=find(f<fmax);%get index below 15Hz, basically 1~13 index
-% f_LP=f(f_LP_ind);
-% M_F_LP=M_F(f_LP_ind);M_P_LP=M_P(f_LP_ind); IMP_measured_LP = M_P_LP./M_F_LP;
-% fcn_IMP=polyfit(f_LP,IMP_measured_LP,7);
-% ff=linspace(f_LP(1),f_LP(end),30);
-% IMP_1=polyval(fcn_IMP,ff);f_LP=ff;
-% Substitute to lower values
-%IMP_measured=IMP_1;f=f_LP;
 
 
 figure(1)
